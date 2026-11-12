@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 23rd Birthday Sweetheart 🌙</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Audio Player -->
+    <audio id="bg-music" loop>
+        <source src="sempurna.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Tombol Kontrol Musik -->
+    <button id="music-toggle" class="music-btn" onclick="toggleMusic()">🎵 Play Music</button>
+
+    <!-- Background Canvas Bintang -->
+    <canvas id="starfield"></canvas>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- WAVE 1: Intro -->
+        <section id="wave1" class="wave active">
+            <div class="moon-container" onclick="startJourney()">
+                <div class="moon"></div>
+                <div class="glow"></div>
+            </div>
+            <h1 class="fade-text">hello there sweetheart</h1>
+            <p class="sub-text">i cant be by your side tonight but hopefully the moon always keep you company</p>
+            <button class="btn" onclick="startJourney()">click her 🌙</button>
+        </section>
+
+        <!-- WAVE 2: Pesan Interaktif -->
+        <section id="wave2" class="wave">
+            <h2 class="title-script">under the starry night...</h2>
+            <div class="card-box">
+                <p id="typed-text"></p>
+            </div>
+            <button class="btn" onclick="nextWave(3)">keep reading... ✨</button>
+        </section>
+
+        <!-- WAVE 3: Make a Wish -->
+        <section id="wave3" class="wave">
+            <h2 class="title-script">make a wish 🌠</h2>
+            <p class="sub-text">close your eyes just a moment sweetheart, then blow out this candle</p>
+            
+            <div class="candle-container" onclick="blowCandle()">
+                <div class="flame" id="flame"></div>
+                <div class="candle"></div>
+            </div>
+
+            <p id="wish-status" class="hint-text">press the small flame to extinguish it (while blowing it so it feels kinda real hehe)</p>
+            <button id="btn-wave3" class="btn hidden" onclick="nextWave(4)">last but not least 💌</button>
+        </section>
+
+        <!-- WAVE 4: Penutup & Harapan -->
+        <section id="wave4" class="wave">
+            <div class="final-moon">🌙</div>
+            <h1 class="title-birthday">happy 23th birthday sweetheart, mamas, bubu, kiky, sky, gilang, and soon my husband ❤️</h1>
+            <div class="letter">
+                <p>iiii mamas tambah tuaaaaa iiiii</p>
+                <p>dede ga banyak harapan selain harapan baik dan doa baik buat mamas karena dede tau pasti mamas udah memikul banyak banget harapan dari orang orang.</p>
+                <p>i hope you live a long happy life sweetheart, lingered with sweet and charming people, kita gabisa minta hidup kita ga dikasi masalah, tapi dede berharap mamas selalu bisa ngelewatin setiap masalah dan badai di hidup mamas tanpa perlu terfikir buat nyerah. you deserve to be happy sweetheart, i love you</p>
+                <p class="signature">sincerely,<br><strong>your little princess ✨</strong></p>
+            </div>
+            <button class="btn-outline" onclick="restart()">play again 🔄</button>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
